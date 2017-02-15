@@ -3,21 +3,26 @@ package edu.alex.Shape;
 /**
  * Created by alex on 07.11.16.
  */
-    public class Circle extends Shape{
-        private float radius;
-        public Circle(float radius){
-            this.radius = radius;
-            this.area = calculateArea();
-            this.perimeter = calculatePerimeter();
-        }
+public class Circle extends Shape {
+    private float radius;
 
-        @Override
-        double calculateArea(){
-            return (Math.PI*Math.pow(radius,2));
-        }
+    public void setRadius(float radius) {
+        this.radius = radius;
+    }
 
-        @Override
-        double calculatePerimeter(){
-            return  (2*Math.PI*radius);
-        }
+    public Circle(float radius) {
+        this.radius = radius;
+        this.area = calculateArea();
+        this.perimeter = calculatePerimeter();
+    }
+
+    @Override
+    public double calculateArea() {
+        return (Math.PI * Math.pow(radius, 2));
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return (2 * Math.PI * radius);
+    }
 }
